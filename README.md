@@ -32,6 +32,7 @@ git checkout develop
 ```
 
 6) Merge the `feature branch` with `develop branch`  and remove it
+(--no-ff option to no fast-forward)
 ```
 git merge --no-ff feature/name-of-feature
 git branch -d feature/name-of-feature
