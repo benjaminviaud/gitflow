@@ -42,7 +42,27 @@ git branch -d feature/name-of-feature
 git push origin develop
 ```
 
-8) Create a `release branch`
+8) Create a `release branch` and move inside
 ```
-git checkout -b release-0.1 develop
+git checkout -b release-0.0.1 develop
+```
+
+9) Work on `release branch` just for fix bugs. Large new features strictly prohibited.
+```
+git commit -a -m "version number 0.0.1"
+```
+
+10) When the `release branch` has finished
+```
+git checkout master
+git merge --no-ff release-0.0.1
+```
+
+11) Add a tag for this release
+```
+git tag -a 0.0.1
+```
+12) Push the tag to the remote repository
+```
+git push origin --tags
 ```
