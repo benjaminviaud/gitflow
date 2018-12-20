@@ -21,7 +21,10 @@ git checkout -b develop
 git checkout -b feature/name-of-feature
 ```
 
-4) Work on `feature branch` and when I finished.
+4) Work on `feature branch` and when I finished, push to remote repository
+```
+git push origin feature/name-of-feature
+```
 
 5) Go back on `develop branch`
 ```
