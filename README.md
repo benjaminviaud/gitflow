@@ -1,12 +1,20 @@
-# Gitflow
+# Gitflow - Commands Reminder
 
-### Commands reminder to start project with Gitflow
+### New project
 1) Init folder and first commit
 ```
 echo "# gitflow" >> README.md
 git init
 git add README.md
-git commit -m "first commit"
+git commit -m "init commit"
+
+OR
+
+git init
+git commit --allow-empty -m "init branch master"
+```
+And push to remote repo
+```
 git push -u origin master
 git remote add origin https://github.com/benjaminviaud/gitflow.git
 ```
@@ -33,7 +41,7 @@ git push origin feature/name-of-feature
 git checkout develop
 ```
 
-6) Merge the `feature branch` with `develop branch` and remove it
+6) Merge the `feature branch` with `develop branch`  and remove it
 ```
 git merge --no-ff feature/name-of-feature
 git branch -d feature/name-of-feature
@@ -67,3 +75,19 @@ git tag -a 0.0.1
 ```
 git push origin --tags
 ```
+
+### Clone project
+
+1) Clone a project
+```
+git clone https://github.com/benjaminviaud/gitflow.git
+
+cd gitflow
+```
+
+2) Clone one remote branch
+```
+git checkout name-of-the-remote-branch
+```
+
+3) Go to the step 3 New project (see above)
