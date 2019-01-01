@@ -15,8 +15,8 @@ git commit --allow-empty -m "init branch master"
 ```
 And push to remote repo
 ```
-git push -u origin master
 git remote add origin https://github.com/benjaminviaud/gitflow.git
+git push -u origin master
 ```
 
 2) Create `develop branch` and move inside
