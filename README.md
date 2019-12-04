@@ -91,3 +91,40 @@ git checkout name-of-the-remote-branch
 ```
 
 3) Go to the step 3 New project (see above)
+
+
+### Remiser (stash)
+
+#### Mettre de côté un travail en cours (et le reprendre plus tard)
+1) remiser l'état en cours avec les fichiers non suivi (-u untracked file)
+```
+git stash push -u -m "ajouter mes fichiers à la zone Remise (stash)"
+```
+
+2) restaurer l'état remisé
+
+a) et supprimer de la remise la sauvegarde (pop)
+```
+git stash pop --index
+```
+b) sans supprimer de la remise la sauvegarde (apply)
+```
+git stash apply --index
+```
+
+### Revenir sur un commit
+ 
+1) pour annuler le commit et revenir à l'état indexé
+```
+git reset --soft HEAD~1
+```
+
+2) pour annuler le commit et revenir à l'état de la copie de travail
+```
+git reset --mixed HEAD~1
+```
+
+3) pour annuler tout travail dans le commit et dans les 3 zones (copie de travail, index, dépot local)
+```
+git reset --keep HEAD~1
+```
